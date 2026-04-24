@@ -45,8 +45,8 @@ public class Main {
             System.out.println(e);
         }
 
-        // 4. Trier par moyenne décroissante (meilleur au moins bon)
-        etudiants.sort((e1, e2) -> Double.compare(e2.getMoyenne(), e1.getMoyenne()));
+        // 4. Trier par moyenne décroissante via Outils
+        Outils.trierParMoyenne(etudiants);
 
         // 5. Afficher le classement final
         System.out.println("\n=== Classement final (meilleur au moins bon) ===");
@@ -54,31 +54,8 @@ public class Main {
             System.out.println((i + 1) + ". " + etudiants.get(i));
         }
 
-        // 6. Sauvegarder les résultats
+        // 6. Sauvegarder les résultats via Outils
         System.out.println("\n=== Sauvegarde des résultats ===");
-        sauvegarderResultats(etudiants, "data/resultats.csv");
-    }
-
-    /**
-     * Sauvegarde les résultats triés dans un fichier CSV.
-     * Format : rang,nom,moyenne
-     */
-    private static void sauvegarderResultats(List<Etudiant> etudiants, String cheminFichier) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(cheminFichier))) {
-
-            writer.write("rang,nom,moyenne");
-            writer.newLine();
-
-            for (int i = 0; i < etudiants.size(); i++) {
-                Etudiant e = etudiants.get(i);
-                writer.write((i + 1) + "," + e.getNom() + "," + String.format("%.2f", e.getMoyenne()));
-                writer.newLine();
-            }
-
-            System.out.println("Résultats sauvegardés dans : " + cheminFichier);
-
-        } catch (IOException e) {
-            System.out.println("Erreur lors de la sauvegarde : " + e.getMessage());
-        }
+        Outils.sauvegarderResultats(etudiants, "data/resultats.csv");
     }
 }
