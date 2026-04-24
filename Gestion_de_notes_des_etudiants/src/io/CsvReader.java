@@ -48,7 +48,7 @@ public class CsvReader {
                         double note = Double.parseDouble(colonnes[i].trim());
                         etudiant.ajouterNote(note);
                     } catch (NumberFormatException e) {
-                        System.err.println("Note invalide pour " + nom + " : " + colonnes[i] + " -> ignorée");
+                        System.err.println("Note invalide pour " + nom + " : " + colonnes[i] + "  ignorée");
                     }
                 }
             }

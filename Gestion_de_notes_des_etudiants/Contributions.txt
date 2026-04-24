@@ -1,25 +1,7 @@
-Projet 1 – Gestion de notes des étudiants
-Membres : Christopher Ngemi, AKA Tanoé
+Répartition des tâches — Projet 1 : Gestion de notes des étudiants
 
-------------------------------------------------------------------------
-Travail réalisé par Christopher :
-- Création de la classe Etudiant (attributs privés, constructeur, méthode calculerMoyenne)
-- Implémentation de la lecture CSV (CsvReader.java)
-  - Gestion des lignes mal formatées
-  - Gestion des notes non numériques (avertissements)
-- Calcul des moyennes (NoteCalculator.java)
-- Rédaction de la section "Gestion des erreurs" dans le README
-
-Travail réalisé par AKA :
-- Implémentation du tri des étudiants par moyenne (ResultSaver.java)
-- Sauvegarde des résultats dans output.csv
-- Affichage console du classement
-- Orchestration générale dans Main.java
-- Rédaction du README (instructions, structure, exemple)
-- Création du .gitignore et du fichier contributions.txt
-
-Travail commun :
-- Tests sur plusieurs jeux de données
-- Correction des bugs (notamment le tri décroissant)
-- Préparation de la présentation orale
-
+- Christophe : classe Etudiant.java (attributs, constructeur, calcul de moyenne, getters, toString),
+               méthode lireCSV dans Outils.java (lecture du fichier, gestion des erreurs)
+- AKA: méthode trierParMoyenne dans Outils.java (tri à bulles par moyenne),
+                        méthode sauvegarderResultats dans Outils.java (écriture du fichier CSV),
+                        classe Main.java (assemblage et affichage des résultats)
