@@ -50,6 +50,6 @@ Le programme affiche le classement dans la console et génère le fichier `data/
 ## Format du fichier CSV d'entrée
 ```
 nom,cours,note1,note2,note3
-Alice,Mathématiques,85,90,78
+AKA,Mathématiques,85,90,78
 Bob,Informatique,72,68,75
 ```
